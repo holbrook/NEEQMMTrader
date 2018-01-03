@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68018DDC-4706-4693-AE8D-E91123947B77}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NEEQMM</RootNamespace>
+    <AssemblyName>NEEQMM.API</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IMMBroker.cs" />
+    <Compile Include="IMMFeed.cs" />
+    <Compile Include="IStrategy.cs" />
+    <Compile Include="Command\MMQuoteCommand.cs" />
+    <Compile Include="Command\StartStrategyCommand.cs" />
+    <Compile Include="Command\StopStrategyCommand.cs" />
+    <Compile Include="Event\MatchedEvent.cs" />
+    <Compile Include="Event\QuotedEvent.cs" />
+    <Compile Include="Message\Instrument.cs" />
+    <Compile Include="Message\Order.cs" />
+    <Compile Include="Message\Position.cs" />
+    <Compile Include="DemoBroker.cs" />
+    <Compile Include="IIndicator.cs" />
+    <Compile Include="Message\MMTick.cs" />
+    <Compile Include="Message\NQTick.cs" />
+    <Compile Include="IStrategyContext.cs" />
+    <Compile Include="Message\Frequency.cs" />
+    <Compile Include="Message\Bar.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Command\" />
+    <Folder Include="Event\" />
+    <Folder Include="Message\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MonoFramework\src\MonoFramework.API\MonoFramework.API.csproj">
+      <Project>{F2E3E9AC-3A20-451F-B46A-A014616A9A25}</Project>
+      <Name>MonoFramework.API</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

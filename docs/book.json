@@ -1,0 +1,20 @@
+{
+    "plugins": [
+        "katex",
+        "uml",
+        "-lunr",
+        "-search",
+        "-fontsettings",
+        "-sharing",
+        "prism",
+        "-highlight",
+        "-livereload"
+    ],
+    "pluginsConfig": {
+        "uml": {
+            "format": "png",
+            "nailgun": false
+        }
+    }
+
+}

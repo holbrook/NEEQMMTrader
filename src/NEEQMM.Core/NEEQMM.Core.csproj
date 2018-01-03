@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62251D88-05F8-4BEE-9E18-0C9AFEBC8F2B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NEEQMM</RootNamespace>
+    <AssemblyName>NEEQMM.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Demo\Debug\Addins</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Demo\Release\Addins</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NEEQMMWorkspace.cs" />
+    <Compile Include="Message\MMOrder.cs" />
+    <Compile Include="Command\MMQuoteCommand.cs" />
+    <Compile Include="Command\StartStrategyCommand.cs" />
+    <Compile Include="Role\IMMBroker.cs" />
+    <Compile Include="Role\IMMFeed.cs" />
+    <Compile Include="Role\IStrategy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MonoFramework\src\MonoFramework.API\MonoFramework.API.csproj">
+      <Project>{F2E3E9AC-3A20-451F-B46A-A014616A9A25}</Project>
+      <Name>MonoFramework.API</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Message\" />
+    <Folder Include="Event\" />
+    <Folder Include="Role\" />
+    <Folder Include="Command\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
