@@ -1,7 +1,5 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DD463DC1-AEE2-4912-B2EC-CDD1019132D9}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\packages.config = .nuget\packages.config
@@ -26,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NEEQMMDemoStgy1", "src\NEEQMMDemoStgy1\NEEQMMDemoStgy1.csproj", "{51DB8474-B9AB-404A-92C3-AB3BB3A449EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NEEQMMDemoStgy2", "src\NEEQMMDemoStgy2\NEEQMMDemoStgy2.csproj", "{A1D588FA-93CD-47B5-84C5-432A500FFBD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoFramework.Workbench", "..\MonoFramework\src\MonoFramework.Workbench\MonoFramework.Workbench.csproj", "{B24898D3-2EBF-4EDC-A2D6-132710977A83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -157,6 +157,16 @@ Global
 		{A1D588FA-93CD-47B5-84C5-432A500FFBD2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A1D588FA-93CD-47B5-84C5-432A500FFBD2}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1D588FA-93CD-47B5-84C5-432A500FFBD2}.Release|x86.Build.0 = Release|Any CPU
+		{B24898D3-2EBF-4EDC-A2D6-132710977A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24898D3-2EBF-4EDC-A2D6-132710977A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24898D3-2EBF-4EDC-A2D6-132710977A83}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B24898D3-2EBF-4EDC-A2D6-132710977A83}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B24898D3-2EBF-4EDC-A2D6-132710977A83}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B24898D3-2EBF-4EDC-A2D6-132710977A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24898D3-2EBF-4EDC-A2D6-132710977A83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B24898D3-2EBF-4EDC-A2D6-132710977A83}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B24898D3-2EBF-4EDC-A2D6-132710977A83}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B24898D3-2EBF-4EDC-A2D6-132710977A83}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
