@@ -20,6 +20,7 @@ namespace MMDashboard
         public DashbaordViewModel()
         {
             Items = new BindableCollection<CardView>();
+            Items.CollectionChanged
         }
     }
 }

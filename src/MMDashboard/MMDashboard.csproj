@@ -59,12 +59,20 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="CardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DashboardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardView.xaml.cs">
+      <DependentUpon>CardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CardViewModel.cs" />
     <Compile Include="DashbaordViewModel.cs" />
     <Compile Include="DashboardView.xaml.cs">
       <DependentUpon>DashboardView.xaml</DependentUpon>
@@ -96,6 +104,10 @@
     <ProjectReference Include="..\..\..\MonoFramework\src\MonoFramework.API\MonoFramework.API.csproj">
       <Project>{f2e3e9ac-3a20-451f-b46a-a014616a9a25}</Project>
       <Name>MonoFramework.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NEEQMM.Core\NEEQMM.Core.csproj">
+      <Project>{62251d88-05f8-4bee-9e18-0c9afebc8f2b}</Project>
+      <Name>NEEQMM.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
