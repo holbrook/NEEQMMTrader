@@ -7,7 +7,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>NEEQMMDemoStgy2</RootNamespace>
     <AssemblyName>NEEQMMDemoStgy2</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,6 +37,10 @@
     <ProjectReference Include="..\..\..\MonoFramework\src\MonoFramework.API\MonoFramework.API.csproj">
       <Project>{F2E3E9AC-3A20-451F-B46A-A014616A9A25}</Project>
       <Name>MonoFramework.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NEEQMM.Core\NEEQMM.Core.csproj">
+      <Project>{62251d88-05f8-4bee-9e18-0c9afebc8f2b}</Project>
+      <Name>NEEQMM.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

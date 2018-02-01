@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using MonoFramework.Workbench;
+using NEEQMM.Event;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,18 +10,19 @@ using System.Threading.Tasks;
 
 namespace MMDashboard
 {
-    public class DashbaordViewModel : IViewPart, IHandle<>
+    public class DashbaordViewModel : IViewPart, IHandle<AssetCollectionChangedEvent>, IHandle<MMStatusChangedEvent>
     {
         public string DisplayName { get { return "做市状态监控";  } }
 
         public IObservableCollection<CardView> Items { get; set; }
 
         
-        public IEventAggregator EventStream { get; set; }
         public DashbaordViewModel()
         {
             Items = new BindableCollection<CardView>();
-            Items.CollectionChanged
+            IoC.Get<IEventAggregator>().Subscribe(this);
         }
+
+
     }
 }

@@ -7,7 +7,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>NEEQMM</RootNamespace>
     <AssemblyName>NEEQMM.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,15 +35,19 @@
     <Compile Include="Command\StopStrategyCommand.cs" />
     <Compile Include="Event\AssetCollectionChangedEvent.cs" />
     <Compile Include="Event\MatchedEvent.cs" />
+    <Compile Include="Event\MMStatusChangedEvent.cs" />
+    <Compile Include="Event\OrderAcceptedEvent.cs" />
     <Compile Include="Event\QuotedEvent.cs" />
     <Compile Include="IIndicator.cs" />
     <Compile Include="IMMBroker.cs" />
     <Compile Include="IMMFeed.cs" />
     <Compile Include="IStrategy.cs" />
     <Compile Include="IStrategyContext.cs" />
+    <Compile Include="VO\Asset.cs" />
     <Compile Include="Message\Bar.cs" />
     <Compile Include="Message\Frequency.cs" />
     <Compile Include="Message\Instrument.cs" />
+    <Compile Include="Message\MMStatus.cs" />
     <Compile Include="Message\MMTick.cs" />
     <Compile Include="Message\NQTick.cs" />
     <Compile Include="Message\Order.cs" />
@@ -52,6 +57,7 @@
     <Compile Include="Message\MMOrder.cs" />
     <Compile Include="Command\MMQuoteCommand.cs" />
     <Compile Include="Command\StartStrategyCommand.cs" />
+    <Compile Include="Model\Portfolio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\MonoFramework\src\MonoFramework.API\MonoFramework.API.csproj">
@@ -59,6 +65,8 @@
       <Name>MonoFramework.API</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

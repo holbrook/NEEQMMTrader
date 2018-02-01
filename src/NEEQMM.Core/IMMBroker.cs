@@ -4,7 +4,7 @@ using NEEQMM.Command;
 
 namespace NEEQMM
 {
-    public interface IMMBroker : IRole, IMessageHandler<MMQuoteCommand>
+    public interface IMMBroker : IRole//, IMessageHandler<MMQuoteCommand>
     {
     }
 }

@@ -10,24 +10,10 @@ namespace NEEQMM.Event
 {
     public class AssetCollectionChangedEvent : IEvent
     {
-        //public NotifyCollectionChangedAction Action { get; set; }
-
-        //public string Code { get; private set; }
-        //public string Name { get; private set; }
-
         public NotifyCollectionChangedEventArgs Changes { get; private set; }
-        public AssetCollectionChangedEvent()
+        public AssetCollectionChangedEvent(NotifyCollectionChangedEventArgs changes)
         {
-            Changes = new NotifyCollectionChangedEventArgs(null);
-            Changes.NewItems
-        }
-
-        public IList<string> NewItems
-        {
-            get
-            {
-                return Changes.NewItems;
-            }
-        }
+            Changes = changes;
+        }        
     }
 }
