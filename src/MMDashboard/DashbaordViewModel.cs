@@ -24,5 +24,15 @@ namespace MMDashboard
         }
 
 
+
+        public void Handle(AssetCollectionChangedEvent message)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Handle(MMStatusChangedEvent message)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

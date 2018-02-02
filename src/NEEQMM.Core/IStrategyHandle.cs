@@ -13,6 +13,6 @@ namespace NEEQMM
     public interface IStrategyHandle<TMessage>
         where TMessage: IStrategyMessage
     {
-        void Handle(IStrategyContext context, TMessage message);
+        void OnMessage(IStrategyContext context, TMessage message);
     }
 }
